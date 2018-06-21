@@ -1,0 +1,18 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// scss/components/_buttons.scss :  Button styles
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+// Button background colors
+.theme__colors.btn {
+  @include bg-colors($btn-colors, "%buttons");
+}
+
+.btn {
+  @include m(group) {
+    a {
+      padding: 10px;
+    }
+  }
+}

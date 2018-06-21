@@ -1,0 +1,82 @@
+.skills {
+  li {
+    display: inline;
+    margin: 0;
+    list-style-type: none;
+    padding: 5px;
+    border: 2px solid hotpink;
+    color: white;
+  }
+}
+
+.cards {
+  perspective: 800px;
+}
+
+.card {
+  position: relative;
+  transition: transform 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
+  transform-style: preserve-3d;
+  a {
+    font-size: em(14px);
+    @include media-query(medium) {
+      font-size: em(16px);
+    }
+  }
+  h3 {
+    color: palette(silver-chalace, xx-dark);
+    padding: 10px;
+  }
+  p {
+    color: palette(silver-chalace, base);
+    text-align: justify;
+    padding: 0 10px;
+  }
+  p,
+  h3 {
+    font-size: em(12px);
+    margin: 0;
+    text-transform: capitalize;
+    @include media-query(large) {
+      font-size: em(16px);
+    }
+  }
+  &:hover {
+    transform: rotateY(-180deg);
+  }
+  @include m(front) {
+    backface-visibility: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  @include m(back) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+}
+
+.card--front,
+.card--back {
+  background: white;
+  height: em(270px); // border: 3px solid blueviolet; // move to at media
+  video {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    padding: em(10px);
+  }
+  @include media-query(medium) {
+    justify-items: center;
+    border: 6px solid $color--secondary;
+    border-radius: $border-radius--default;
+    -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+    box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  }
+}

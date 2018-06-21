@@ -1,0 +1,116 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// scss/components/_typography.scss : Font styles
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+// Header
+header {
+  h1 {
+    margin-top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: "Poiret One", cursive;
+    line-height: 1.5;
+    color: white;
+    font-size: em(25px);
+    text-align: center;
+  }
+}
+
+// Main Container
+.container {
+  // color: palette(silver-chalace, dark);
+  font-size: em(18px);
+  font-family: $font-family--primary;
+  font-weight: $font-weight--medium;
+  h1 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .search {
+    outline: none;
+    border: 2px solid gray;
+    border-radius: $border-radius--default;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .fa-searchengin {
+    cursor: initial;
+    margin: -45px;
+  }
+  @include media-query(medium) {
+    font-size: em(18px);
+    h1 {
+      font-size: 2em;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+  }
+  @include media-query(large) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+}
+
+// Main Headlines
+.headline {
+  @include m(primary) {
+    @extend %headline-primary;
+    margin-top: 0;
+    margin-bottom: em(40px, 30px);
+    color: $color--primary;
+    @include media-query(medium) {
+      text-align: center;
+      padding-left: 0;
+    }
+  }
+}
+
+// Links
+.link {
+  text-decoration: none;
+  color: $color--secondary;
+  font-weight: $font-weight--bold;
+}
+
+.card {
+  // background: yellow;
+  h3 {
+    margin: 0;
+    color: $color--primary;
+  }
+  @include media-query(medium) {
+    margin-top: 0;
+  }
+}
+
+// Blockquote
+.blockquote {
+  margin: 0;
+  margin-bottom: em(25px);
+  font-size: em(21px);
+  font-style: italic;
+  border-left: em(6px) solid $color--primary;
+  border-radius: em(5px);
+  padding-left: em(10px);
+  @include media-query(medium) {
+    margin-left: em(40px);
+    padding-left: em(20px);
+    padding-right: em(40px);
+    letter-spacing: $letter-space;
+  }
+}
+
+// review Stars
+.star {
+  width: em(15px);
+  fill: yellow;
+}
+
+.fa-cog{
+  position: fixed;
+  margin-top: - 50%;
+  color: rgba(255,255,255,0.4);
+  font-size: 100vw;
+}

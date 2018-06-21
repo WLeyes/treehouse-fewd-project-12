@@ -1,0 +1,84 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// scss/components/_grid.scss :  grid container for grid system
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+body {
+  background: linear-gradient(-45deg, orange 45%, hotpink);
+}
+
+// Grid Background colors
+.theme__colors.grid {
+  @include bg-colors($grid-colors, "%buttons", $selector--element);
+}
+
+// Grid Container
+.grid {
+  @include e(row) {
+    margin-top: em(20px);
+    p {
+      margin-bottom: em(20px);
+      padding-left: 20px;
+      padding-right: 20px;
+      line-height: em(27px, 18px);
+    }
+  }
+}
+
+.container {
+  // padding: em(5px); // move to media query
+  @extend %clearfix;
+  @extend %centered;
+  width: 100%;
+  @include flex(column);
+  @include media-query(medium) {
+    max-width: $max-width;
+    justify-content: space-between;
+  }
+}
+
+.header {
+  display: grid;
+  div {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media-query(medium) {
+    div {
+      width: 25%;
+      margin-left: 0;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-gap: em(30px);
+  grid-template-columns: 1fr; // change to 1fr at media
+  grid-template-rows: 1fr;
+  @include media-query(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-query(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  @include m(front) {
+    display: grid;
+    padding: 0 5px;
+    grid-template-columns: 1fr;
+  }
+  @include m(back) {
+    display: grid;
+    padding: 0 5px;
+    grid-template-columns: 1fr;
+    .player {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+}

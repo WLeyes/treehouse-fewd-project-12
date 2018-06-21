@@ -1,0 +1,79 @@
+.modal{
+  font-family: $font-family--primary;
+  font-weight: $font-weight--medium;
+  display: none;
+  z-index: 100;
+  position: fixed;
+  background: $color--shadow;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include m(contents){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    width: 320px;
+    height: 400px;
+    text-align: center;
+    
+    border: 2px solid gray;
+    border-radius: $border-radius--default;
+    p, h3{
+      text-transform: capitalize;
+      margin: 0;
+      padding: 5px;
+      color: $silver-chalace;
+      font-size: 14px;
+      @include media-query(medium){
+        font-size: 16px;
+      }
+    }
+    a{
+      font-size: 20px;
+    }
+    hr{
+      width: 80%;
+    }
+    img{
+      margin-top: 50px;
+      width: 128px;
+    }
+    @include media-query(medium){
+      width: 450px;
+    } 
+  }
+  
+}
+
+.fa-times-circle{
+  z-index: 101;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:10px;
+  font-size: 30px;
+  color: red;
+}
+
+.fa-angle-double-right{
+  z-index: 101;
+  position: absolute;
+  font-size: 60px;
+  bottom: 0;
+  right: 10px;
+  color: $color--accent;
+}
+
+.fa-angle-double-left{
+  z-index: 101;
+  position: absolute;
+  font-size: 60px;
+  bottom: 0;
+  left: 10px;
+  color: $color--accent;
+}
