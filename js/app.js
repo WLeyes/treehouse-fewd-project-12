@@ -44,19 +44,11 @@ const UICtrl = (() => {
         let image = data.results[i].picture.medium;
         let email = data.results[i].email;
         let username = `
-        <div class="grid__row">
-
+        <div class="reviews grid__row">
           <div>
-            <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--rounded"></img>
-          </div>
-          
-          <div>
+            <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--profile"></img>
             <p>${firstName} ${lastName}</p>
             <p>${randomReview()}</p>
-          </div>
-          
-          <div>
-            <i class="fas fa-angle-right"></i>
           </div>
         </div>        
         

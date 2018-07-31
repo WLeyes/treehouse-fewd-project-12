@@ -21,6 +21,6 @@ function randomReview() {
   }
   let output = `
     ${random_review}<br>
-    Stars: "<span class="stars">${random_stars}</span>"`;
+    Stars: <span class="stars"> ${random_stars} </span>`;
   return output;
 }

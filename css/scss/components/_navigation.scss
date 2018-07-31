@@ -5,20 +5,19 @@
 */
 
 .nav {
+  margin: 0 0 em(20px) 0;
   text-align: center;
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  @include flex(row){
-    @include bem(item) { 
+  @extend %centered;
+  @include flex(row) {
+    @include bem(item) {
+      @extend %centered;
       a {
-        justify-content: center;
-        margin-top: 0;
+        justify-content: space-around;
+        margin: 0;
+        width: em(85px);
         @extend %navigation-menu--links;
         color: palette(silver-chalace, dark);
-        @include media-query(medium){
-          width: 100%;
-        }
         li {
           margin: 0;
         }
@@ -28,14 +27,15 @@
         &:focus {
           color: $white;
         }
+        @include media-query(medium) {
+          width: 90%;
+        }
       }
     }
   }
-  @include media-query(medium){
-    @include flex(column){
+  @include media-query(medium) {
+    @include flex(column) {
       & * {
-        margin-top: em(6px);
-        margin-left: em(10px);
         justify-content: space-around;
       }
     }

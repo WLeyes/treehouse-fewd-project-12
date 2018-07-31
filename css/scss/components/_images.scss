@@ -6,7 +6,10 @@
 
 .img {
   @include m(profile) {
-    width: 72px;
+    margin: em(20px) 0 0 em(20px);
+    padding: em(5px);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: em(72px);
     border-radius: $border-radius--round;
   }
   @include m(background){

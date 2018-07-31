@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   @extend %centered;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: em(16px);
   width: 90%;
   max-width: em(320px);
-  height: 65vh;
+  height: em(485px);
   border-radius: $border-radius--default;
   background-color: $color--logo-background;
   color: $white;

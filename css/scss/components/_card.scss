@@ -1,16 +1,36 @@
 .skills {
+  width: 100%;
   li {
-    display: inline;
+    display: inline-flex;
     margin: 0;
     list-style-type: none;
     padding: 5px;
-    border: 2px solid hotpink;
-    color: white;
+    color: palette(silver-chalace, xx-dark);
+    justify-content: space-evenly;
+    font-size: em(30px);
   }
 }
 
 .cards {
   perspective: 800px;
+}
+
+.reviews{
+  width: 90%;
+  @extend %centered;
+  border-radius: $border-radius--default;
+  -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  color: white;
+  background-color: $color--logo-background;
+  p{
+    text-transform: capitalize;
+    font-size: em(14px);
+  }
+  p:last-of-type{
+    padding-bottom: em(20px);
+  }
 }
 
 .card {
