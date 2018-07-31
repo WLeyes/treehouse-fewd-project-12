@@ -1,4 +1,4 @@
-.logo{
+.logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,31 +9,31 @@
   max-width: em(320px);
   height: 65vh;
   border-radius: $border-radius--default;
-  background-color: $color--logo-background;
+  background-color: red;
   color: $white;
   text-align: center;
   text-transform: uppercase;
   justify-content: space-around;
   -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
-    box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
-  @include m(icon){
+  -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  @include m(icon) {
     // margin-top: 25%;
   }
-  @include m(line1){
+  @include m(line1) {
     font-size: em(60px);
     font-family: $font-family--primary;
     font-weight: $font-weight--ultra-bold;
     margin: 0;
   }
-  @include m(line2){
+  @include m(line2) {
     font-size: em(70px);
     font-family: $font-family--primary;
     font-weight: $font-weight--ultra-bold;
     letter-spacing: em(2px);
     margin: 0;
   }
-  @include m(line3){
+  @include m(line3) {
     font-size: em(18px);
     font-family: $font-family--primary;
     font-weight: $font-weight--bold;
