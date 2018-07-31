@@ -21,25 +21,26 @@ $base__line-height : 24px;
 $letter-space      : 1px;
 
 // Descriptive Base Colors
-$white           : #fff;
-$black           : #0b0b0b;
-$silver-chalace  : #a2a2a2;
+$white            : #fff;
+$black            : #0b0b0b;
+$silver-chalace   : #a2a2a2;
 
-$malibu          : #55def8;
-$viking          : #58e1c1;
+$alizarin-crimson : #E02121;
+$malibu           : #55def8;
+$viking           : #58e1c1;
 
-$emerald         : #63cc82;
-$sunglo          : #e4757a;
-$coral           : #fd7856;
-$purple-majesty  : #927bc1;
+$emerald          : #63cc82;
+$sunglo           : #e4757a;
+$coral            : #fd7856;
+$purple-majesty   : #927bc1;
 
-$riptide         : #80e8d1;
-$shakespeare     : #3fabca;
-$anakiwa         : #7ee6fd;
-$french-lilac    : #deb2ee;
-$vista-blue      : #88d9a0;
-$sea-pink        : #ec9fa3;
-$vivid-tangerine : #fd9f85;
+$riptide          : #80e8d1;
+$shakespeare      : #3fabca;
+$anakiwa          : #7ee6fd;
+$french-lilac     : #deb2ee;
+$vista-blue       : #88d9a0;
+$sea-pink         : #ec9fa3;
+$vivid-tangerine  : #fd9f85;
 
 ////////////////////////////////////////////////////////////////////////////////
 // THEME COLORS
@@ -68,6 +69,9 @@ $color--primary    : palette(silver-chalace,xx-dark);
 $color--secondary  : palette(silver-chalace,xx-light);
 $color--accent     : $emerald;
 $color--shadow     : rgba($black, .7);
+
+// Logo Color
+$color--logo-background : $alizarin-crimson;
 
 // Button colors
 $btn-colors: (
@@ -116,7 +120,7 @@ $grid-column-count          : 12;
 $max-width--grid-container  : 1400px;
 
 // Border radius
-$border-radius--default     : .4em;
+$border-radius--default     : .6em;
 $border-radius--round       : 50%;
 
 // Transitions

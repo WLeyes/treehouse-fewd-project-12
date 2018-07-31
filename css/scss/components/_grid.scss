@@ -4,19 +4,31 @@
 ////////////////////////////////////////////////////////////////////////////////
 */
 
-body {
-  background: linear-gradient(-45deg, orange 45%, hotpink);
-}
+// body {
+//   background: linear-gradient(-45deg, orange 45%, hotpink);
+// }
 
 // Grid Background colors
 .theme__colors.grid {
   @include bg-colors($grid-colors, "%buttons", $selector--element);
 }
-
+.skill{
+  display: flex;
+  @extend %centered;
+  @include m(item){
+    text-transform: uppercase;
+    flex-direction: row;
+    padding: em(5px);
+    list-style-type:none;
+    width: 100%;
+    justify-content: space-evenly;
+  color: red;
+  }
+}
 // Grid Container
 .grid {
   @include e(row) {
-    margin-top: em(20px);
+    // margin-top: em(20px);
     p {
       margin-bottom: em(20px);
       padding-left: 20px;

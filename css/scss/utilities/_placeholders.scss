@@ -65,11 +65,35 @@
 }
 
 
+
+//////////////////////////////////////////////////////////////////////////////
+// Navigation
+//////////////////////////////////////////////////////////////////////////////
+
+%navigation-menu--links {
+  display: block;
+  background-color: transparent;
+  border: 1px solid $color--logo-background;
+  justify-items: center;
+  font-size: em(18px);
+  font-weight: $font-weight--medium;
+  text-align: center;
+  text-decoration: none;
+  padding-top: em(14px, 18px);
+  padding-bottom: em(14px, 18px);
+  border-radius: $border-radius--default;
+  z-index: 10;
+}
+
+%navigation-menu--on {
+  color: $color--logo-background;
+  background-color: $color--primary;
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // Buttons
 //////////////////////////////////////////////////////////////////////////////
 %buttons {
-  // padding: 10px 20px; // move to at media
   border-radius: $border-radius--default;
   color: $white;
   text-transform: uppercase;
@@ -81,9 +105,10 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  // text-align: center;
+  width: em(200px);
   font-size: em(12px,16px);
   margin-bottom: em(10px);
+  padding: em(15px);
   &:hover {
     opacity: .75;
   }

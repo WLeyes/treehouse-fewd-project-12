@@ -7,7 +7,7 @@
 // Header
 header {
   h1 {
-    margin-top: 0;
+    margin: 0;
     background: rgba(0, 0, 0, 0.6);
     font-family: "Poiret One", cursive;
     line-height: 1.5;
@@ -19,13 +19,19 @@ header {
 
 // Main Container
 .container {
-  // color: palette(silver-chalace, dark);
-  font-size: em(18px);
+  color: palette(silver-chalace, dark);
+  // font-size: em(18px);
   font-family: $font-family--primary;
   font-weight: $font-weight--medium;
   h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
+    @extend %centered;
+    padding: em(5px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $white;
+    width: 90%;
+    border-radius: $border-radius--default;
   }
   .search {
     outline: none;
@@ -103,7 +109,7 @@ header {
 }
 
 // review Stars
-.star {
+.stars {
   width: em(15px);
   fill: yellow;
 }
@@ -111,6 +117,6 @@ header {
 .fa-cog{
   position: fixed;
   margin-top: - 50%;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.5);
   font-size: 100vw;
 }

@@ -1,0 +1,27 @@
+.logo{
+  // display: flex;
+  @extend %centered;
+  margin-top: 5%;
+  width: 90%;
+  max-width: em(320px);
+  height: 65vh;
+  border-radius: $border-radius--default;
+  background-color: $color--logo-background;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: space-around;
+  
+  @include m(line1){
+    font-size: em(60px);
+    margin: 0;
+  }
+  @include m(line2){
+    font-size: em(70px);
+    margin: 0;
+  }
+}
+.fa-code{
+  color: white;
+  margin-top: -10px;
+}
