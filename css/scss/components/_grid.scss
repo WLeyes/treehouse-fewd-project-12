@@ -7,24 +7,23 @@
 // body {
 //   background: linear-gradient(-45deg, orange 45%, hotpink);
 // }
-
 // Grid Background colors
 .theme__colors.grid {
   @include bg-colors($grid-colors, "%buttons", $selector--element);
 }
-.skill{
+
+.skill {
   display: flex;
   @extend %centered;
-  @include m(item){
+  @include m(item) {
     text-transform: uppercase;
     flex-direction: row;
     padding: em(5px);
-    list-style-type:none;
-    width: 100%;
+    list-style-type: none;
     justify-content: space-evenly;
-  color: red;
   }
 }
+
 // Grid Container
 .grid {
   @include e(row) {
