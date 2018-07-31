@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poiret+One|Lato:100,300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900");
 /*
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // scss/utilities/_placeholders.scss :   placeholders for: links, images, headlines, nav items
@@ -31,14 +31,14 @@
 
 .headline--primary {
   font-size: 1.875em;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
   line-height: 1em; }
 
 .nav__item a {
   display: block;
   background-color: transparent;
-  border: 1px solid #E02121;
+  border: 1px solid #87CEFA;
   justify-items: center;
   font-size: 1.125em;
   font-weight: 400;
@@ -50,7 +50,7 @@
   z-index: 10; }
 
 .nav__item a:hover {
-  color: #E02121;
+  color: #87CEFA;
   background-color: palette(silver-chalace, xx-dark); }
 
 .theme__colors.grid__col--3, .theme__colors.grid__col--4, .theme__colors.grid__col--5, .theme__colors.grid__col--6, .theme__colors.grid__col--7, .theme__colors.grid__col--8, .theme__colors.grid__col--12, .theme__colors.btn--default, .theme__colors.btn--success, .theme__colors.btn--error, .theme__colors.btn--warning, .theme__colors.btn--info {
@@ -4537,7 +4537,7 @@ header h1 {
 
 .container {
   color: #8e8e8e;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400; }
   .container h1 {
     font-size: 1.25em;
@@ -4653,7 +4653,7 @@ header h1 {
 ////////////////////////////////////////////////////////////////////////////////
 */
 .theme__colors.btn--default {
-  background-color: #55def8; }
+  background-color: #87CEFA; }
 .theme__colors.btn--success {
   background-color: #63cc82; }
 .theme__colors.btn--error {
@@ -4752,7 +4752,7 @@ header h1 {
       box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63); } }
 
 .modal {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   display: none;
   z-index: 100;
@@ -4828,12 +4828,16 @@ header h1 {
   height: 2em; }
 
 .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 5%;
+  margin-bottom: 1em;
   width: 90%;
   max-width: 20em;
   height: 65vh;
   border-radius: 0.6em;
-  background-color: #E02121;
+  background-color: #87CEFA;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
@@ -4841,17 +4845,21 @@ header h1 {
   -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
   -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
   box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63); }
-  .logo--icon {
-    margin-top: 25%; }
   .logo--line1 {
     font-size: 3.75em;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
     margin: 0; }
   .logo--line2 {
     font-size: 4.375em;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.125em;
     margin: 0; }
-
-.fa-code {
-  color: white;
-  margin-top: -10px; }
+  .logo--line3 {
+    font-size: 1.125em;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0; }
 
 /*# sourceMappingURL=styles.css.map */

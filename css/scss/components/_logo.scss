@@ -1,7 +1,10 @@
 .logo{
-  // display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @extend %centered;
   margin-top: 5%;
+  margin-bottom: em(16px);
   width: 90%;
   max-width: em(320px);
   height: 65vh;
@@ -15,18 +18,25 @@
     -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
     box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
   @include m(icon){
-    margin-top: 25%;
+    // margin-top: 25%;
   }
   @include m(line1){
     font-size: em(60px);
+    font-family: $font-family--primary;
+    font-weight: $font-weight--ultra-bold;
     margin: 0;
   }
   @include m(line2){
     font-size: em(70px);
+    font-family: $font-family--primary;
+    font-weight: $font-weight--ultra-bold;
+    letter-spacing: em(2px);
     margin: 0;
   }
-}
-.fa-code{
-  color: white;
-  margin-top: -10px;
+  @include m(line3){
+    font-size: em(18px);
+    font-family: $font-family--primary;
+    font-weight: $font-weight--bold;
+    margin: 0;
+  }
 }
