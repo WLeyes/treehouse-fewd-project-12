@@ -4838,6 +4838,8 @@ header h1 {
   text-align: center;
   text-transform: uppercase;
   justify-content: space-around; }
+  .logo--icon {
+    margin-top: 25%; }
   .logo--line1 {
     font-size: 3.75em;
     margin: 0; }
