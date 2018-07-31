@@ -4837,7 +4837,10 @@ header h1 {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  justify-content: space-around; }
+  justify-content: space-around;
+  -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63); }
   .logo--icon {
     margin-top: 25%; }
   .logo--line1 {
