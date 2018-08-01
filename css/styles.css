@@ -4538,15 +4538,24 @@ header h1 {
 .container {
   color: #8e8e8e;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  text-align: center; }
   .container h1 {
     font-size: 1.25em;
     text-align: center;
+    margin-bottom: 1em;
     padding: 0.3125em;
     background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     width: 90%;
     border-radius: 0.6em; }
+  .container h2 {
+    margin-bottom: 0; }
+  .container p {
+    margin-top: 0; }
+  .container .about p {
+    text-align: left;
+    margin: 0 1.25em 0.625em 1.25em; }
   .container .search {
     outline: none;
     border: 2px solid gray;
@@ -4565,7 +4574,8 @@ header h1 {
         margin-bottom: 5px; } }
   @media (min-width: 1100px) {
     .container h1 {
-      font-size: 2.5em; } }
+      font-size: 2.5em;
+      text-align: center; } }
 
 .headline--primary {
   margin-top: 0;
@@ -4619,7 +4629,7 @@ header h1 {
 ////////////////////////////////////////////////////////////////////////////////
 */
 .nav {
-  margin: 0 0 1.25em 0;
+  margin: 0 auto;
   text-align: center;
   list-style-type: none;
   display: flex;
@@ -4634,16 +4644,20 @@ header h1 {
       margin: 0; }
     .nav__item a:focus {
       color: #fff; }
-    @media (min-width: 768px) {
-      .nav__item a {
-        width: 90%; } }
   @media (min-width: 768px) {
     .nav {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .nav * {
-        justify-content: space-around; } }
+      position: absolute;
+      top: 0.625em;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 90%;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 0.625em;
+      border-radius: 0.6em;
+      -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+      -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+      box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63); } }
 
 /*
 ////////////////////////////////////////////////////////////////////////////////
@@ -4730,10 +4744,6 @@ header h1 {
     font-size: 0.75em;
     margin: 0;
     text-transform: capitalize; }
-    @media (min-width: 1100px) {
-      .card p,
-      .card h3 {
-        font-size: 1em; } }
   .card:hover {
     transform: rotateY(-180deg); }
   .card--front {
@@ -4879,5 +4889,10 @@ header h1 {
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     margin: 0; }
+  @media (min-width: 768px) {
+    .logo {
+      height: auto;
+      padding: 0.625em;
+      margin-top: 7.5em; } }
 
 /*# sourceMappingURL=styles.css.map */

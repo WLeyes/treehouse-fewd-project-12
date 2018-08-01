@@ -57,9 +57,6 @@
     font-size: em(12px);
     margin: 0;
     text-transform: capitalize;
-    @include media-query(large) {
-      font-size: em(16px);
-    }
   }
   &:hover {
     transform: rotateY(-180deg);

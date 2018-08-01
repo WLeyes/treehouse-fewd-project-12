@@ -5,7 +5,7 @@
 */
 
 .nav {
-  margin: 0 0 em(20px) 0;
+  margin: 0 auto;
   text-align: center;
   list-style-type: none;
   @extend %centered;
@@ -27,17 +27,21 @@
         &:focus {
           color: $white;
         }
-        @include media-query(medium) {
-          width: 90%;
-        }
       }
     }
   }
   @include media-query(medium) {
-    @include flex(column) {
-      & * {
-        justify-content: space-around;
-      }
-    }
+    position: absolute;
+    top: em(10px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: em(10px);
+    border-radius: $border-radius--default;
+    -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+    box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
   }
 }
