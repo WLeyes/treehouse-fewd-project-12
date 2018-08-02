@@ -23,7 +23,7 @@ const DataCtrl = (() => {
   // public
   return {
     getRandomUser: () => {
-      fetchUserJSON("https://randomuser.me/api/", 12);
+      fetchUserJSON("https://randomuser.me/api/", 13);
     }
   };
 })();
@@ -74,7 +74,9 @@ const UICtrl = (() => {
             <!-- Offer download -->
             <a href="${video_mp4}">Download MP4</a>
           </video>
-          
+          <div grid__row>
+            <p class="skills">Skills used: ${skills}</p>
+          </div>
           <div class="btn--group grid__row">
             <a href="${repository}" target="_blank" class="btn--default theme__colors">
               <img src="img/github.svg" alt="Code svg" class="icons--github">view code
@@ -100,19 +102,14 @@ const UICtrl = (() => {
         let image = data.results[i].picture.medium;
         let email = data.results[i].email;
         let username = `
-        <div class="reviews grid__row">
-          <div>
-            <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--profile"></img>
-            <p>${firstName} ${lastName}</p>
-            <p>${randomReview()}</p>
-          </div>
+        <div class="reviews">
+          <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--profile"></img>
+          <p>${firstName} ${lastName}</p>
+          <p>${randomReview()}</p>
         </div>        
         `;
         let reviewer = document.querySelector(UISelectors.recentActivity);
-        let output = document.createElement("div");
-        output.innerHTML = username;
-        reviewer.appendChild(output);
-        reviewer.className = "grid__col--6";
+        reviewer.innerHTML += username;
 
         for (let i = 1; i < 5; i++) {
           array.push(

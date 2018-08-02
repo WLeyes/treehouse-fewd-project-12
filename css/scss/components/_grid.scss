@@ -64,9 +64,23 @@
   }
 }
 
-.cards {
+#recent-activity {
   display: grid;
-  grid-gap: em(30px);
+  grid-gap: em(20px);
+  grid-template-columns: 1fr; // change to 1fr at media
+  grid-template-rows: 1fr;
+  @include media-query(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-query(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cards,
+  {
+  display: grid;
+  grid-gap: em(20px);
   grid-template-columns: 1fr; // change to 1fr at media
   grid-template-rows: 1fr;
   @include media-query(medium) {

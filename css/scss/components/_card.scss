@@ -15,8 +15,16 @@
   perspective: 600px;
 }
 
+#recent-activity {
+  // display: grid; // flex-direction: column;
+}
+
 .reviews {
+  position: relative;
+  margin-top: em(20px);
   width: 90%;
+  text-align: left;
+  padding-left: em(10px);
   @extend %centered;
   border-radius: $border-radius--default;
   -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
@@ -37,6 +45,8 @@
   position: relative;
   transition: transform 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
   transform-style: preserve-3d;
+  max-width: 400px;
+  @extend %centered;
   a {
     font-size: em(14px);
     @include media-query(medium) {
@@ -54,7 +64,7 @@
   }
   p,
   h3 {
-    font-size: em(12px);
+    font-size: em(16px);
     margin: 0;
     text-transform: capitalize;
   }
@@ -80,15 +90,23 @@
 
 .card--front,
 .card--back {
+  @extend %centered;
   background: white;
-  height: em(270px); // border: 3px solid blueviolet; // move to at media
+  padding: em(10px);
+  min-height: em(350px);
+  border: 1px solid grey;
+  border-radius: $border-radius--default;
   video {
     width: 100%;
-    height: 200px;
     margin: 0;
     padding: em(10px);
+    &::-webkit-media-controls-fullscreen-button {
+      display: none !important;
+    }
   }
   @include media-query(medium) {
+    font-size: em(12px);
+    height: em(400px);
     justify-items: center;
     border: 6px solid $color--secondary;
     border-radius: $border-radius--default;
