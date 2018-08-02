@@ -23,7 +23,7 @@ const DataCtrl = (() => {
   // public
   return {
     getRandomUser: () => {
-      fetchUserJSON("https://randomuser.me/api/", 13);
+      fetchUserJSON("https://randomuser.me/api/", 12);
     }
   };
 })();
@@ -96,7 +96,7 @@ const UICtrl = (() => {
     },
     recentActivity: data => {
       let array = [];
-      for (let i = 1; i < data.results.length; i++) {
+      for (let i = 0; i < data.results.length; i++) {
         let firstName = data.results[i].name.first;
         let lastName = data.results[i].name.last;
         let image = data.results[i].picture.medium;
