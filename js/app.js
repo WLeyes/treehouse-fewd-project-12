@@ -36,7 +36,6 @@ const UICtrl = (() => {
   return {
     recentActivity: data => {
       console.log(data);
-      let array = [];
       for (let i = 0; i < data.results.length; i++) {
         let firstName = data.results[i].name.first;
         let lastName = data.results[i].name.last;
@@ -51,12 +50,6 @@ const UICtrl = (() => {
         `;
         let reviewer = document.querySelector(UISelectors.recentActivity);
         reviewer.innerHTML += username;
-
-        for (let i = 1; i < 5; i++) {
-          array.push(
-            `${data.results[i].name.first} ${data.results[i].name.last}`
-          );
-        }
       }
     },
     cards: () => {
@@ -81,7 +74,7 @@ const UICtrl = (() => {
           <p>${description}</p>
         </div>
         <div class="card--back">
-          <video controls id="player${player_id}" class="player" title="${video_title}">
+          <video controls  preload = "none" id="player${player_id}" class="player" title="${video_title}">
             <source src="${video_mp4}" type="video/mp4">
             <source src="${video_ogg}" type="video/ogg">
             <!-- Flash fallback -->
@@ -113,6 +106,8 @@ const UICtrl = (() => {
         let cardElement = document.querySelector(UISelectors.cards);
         console.log(cardElement);
         cardElement.innerHTML += card;
+        console.log(card);
+
       }
     },
     getSelectors: () => UISelectors
