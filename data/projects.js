@@ -116,7 +116,7 @@ let project = [
     image: "img/project9.PNG",
     alt: "Project 9 screenshot",
     description:
-      "For this project I built what one might expect for an Interactive Web app dashboard. Durring the process I learned more about svg's, took my javascript even further by utilizing a third-party API, took time to learn a bit about D3.js and Charts.js libraries to build components that are interactive with a focus on usability.",
+      "For this project I built what one might expect for an Interactive Web app dashboard. Durring the process I learned more about svg's, took my javascript even further by utilizing a third-party API, took time to learn a bit about D3.js and Charts.js libraries",
     player_ID: "9",
     video_title: "Project 9",
     video_MP4: "media/project9.mp4",
