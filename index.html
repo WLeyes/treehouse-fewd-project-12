@@ -104,7 +104,7 @@
     </section>
 
     <section id="contact">
-      <form name="contactForm" id="contactForm" action="/webformmailer.php" method="post" accept-charset="UTF-8" autocomplete="on">
+      <form name="contactForm" id="contactForm" action="JavaScript:sendForm()" method="post" accept-charset="UTF-8" autocomplete="on">
         <input type="hidden" name="subject" value="Contact Form Submission" />
         <input type="hidden" name="redirect" value="thankyou.html" />
         <h2>Contact Me</h2>
@@ -122,10 +122,10 @@
               title="Format: email@example.com" placeholder="Required" required>
 
             <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone" pattern="[\+]?[\d{1}]?[\(-)]?\d{3}[\)]?[\-]?\d{3}[\-]?\d{4}" title="Formats:xxxXXXxxxx, xxx-xxx-xxxx, (xxx)xxx-xxxx x-xxx-xxx-xxxx, +x-xxx-xxx-xxxx">
+            <input type="tel" name="phone" id="phone" pattern="[\+]?[\d{1}]?[\(-)]?\d{3}[\)]?[\-]?\d{3}[\-]?\d{4}" title="Formats:xxxXXXxxxx, xxx-xxx-xxxx, (xxx)xxx-xxxx x-xxx-xxx-xxxx, +x-xxx-xxx-xxxx" required>
 
             <label for="text-area">Comments:</label>
-            <textarea id="text-area" name="text-area" cols="40" rows="10" placeholder="Required"></textarea>
+            <textarea id="text-area" name="text-area" cols="40" rows="10" placeholder="Required" required></textarea>
           </div>
         </fieldset>
         <input type="submit" name="submit" value="Send">
