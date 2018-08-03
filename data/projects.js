@@ -4,7 +4,7 @@ let project = [
     image: "img/project1.PNG",
     alt: "Project 1 screenshot",
     description:
-      "Customize a personal online profile by adding graphics, customizing text, and improving the look of a web page using Cascading Style Sheets, the formatting language of the web. Share your finished project on GitHub, a website used by teams of programmers to share and work on programming code.",
+      "In this first project we covered the basics of HTML and modified the starter files byadding our own graphics, customizing the text and improving the overall look and feel of the site using html and basic css.",
     player_ID: "1",
     video_title: "Project 1",
     video_MP4: "media/project1.mp4",
@@ -18,7 +18,7 @@ let project = [
     image: "img/project2.PNG",
     alt: "Project 2 screenshot",
     description:
-      "Designing web pages that look and function well on multiple screen sizes is an essential skill for a web developer. Using HTML, CSS, and responsive design, you'll create a mobile-first web page with a layout that adjusts to fit mobile phones, tablets and desktop displays.",
+      "In this project using just html and CSS I had to build the site utilizing a mobile-first approach to adapt to mobile phones, tablets and desktop computers.",
     player_ID: "2",
     video_title: "Project 2",
     video_MP4: "media/project2.mp4",
@@ -32,7 +32,7 @@ let project = [
     image: "img/project3.PNG",
     alt: "Project 3 screenshot",
     description:
-      "Web forms appear everywhere online: forms allow users to order books, sign up for web sites, and post to Facebook. This project challenges you to build a responsive, mobile-first registration form using a variety of HTML form elements.",
+      "This project involved building a mobile-first registration form using a variety of HTML form elements, CSS and JavaScript",
     player_ID: "1",
     video_title: "Project 3",
     video_MP4: "media/project3.mp4",
@@ -46,7 +46,7 @@ let project = [
     image: "img/project4.PNG",
     alt: "Project 4 screenshot",
     description:
-      "Interactive image galleries are a common feature of many websites, from photo sites to e-commerce applications. Use HTML, CSS and the popular programming language JavaScript to create an interactive, searchable gallery of photos.",
+      "The goal of this project was to build an interactive image galleries useing HTML, CSS, Javascript jquery for JQuery plugin to create an interactive, searchable gallery of photos.",
     player_ID: "4",
     video_title: "Project 4",
     video_MP4: "media/project4.mp4",
@@ -60,12 +60,12 @@ let project = [
     image: "img/project5.PNG",
     alt: "Project 5 screenshot",
     description:
-      "Sass is an important tool in a modern Front End Web Developer’s toolbox. It's used by many developers to make styling web pages with CSS easier and faster. Create a style guide that can act as your own personal and custom Bootstrap that you can drop into any of your projects to speed up styling, layout and development in general.",
+      "The primary focus of this project was SASS using the BEM methodology and SMACSS (scalable and Modular Architecture for CSS) to build a style guide for a web site.",
     player_ID: "5",
     video_title: "Project 5",
     video_MP4: "media/project5.mp4",
     video_OGG: "media/project5.ogg",
-    skills: ["html", "css", "JavaScript"],
+    skills: ["html", "css"],
     repository: "https://github.com/WLeyes/treehouse-fewd-project-05",
     preview: "https://leyes.ca/treehouse-fewd-project-05"
   },
@@ -74,7 +74,7 @@ let project = [
     image: "img/project6.PNG",
     alt: "Project 6 screenshot",
     description:
-      "Build an HTML5 video player using JavaScript and the HTML5 Video API. Video, and the interface used to control the video, is increasingly important for many different kinds of web applications, including web site landing pages, blogs, podcasts, product marketing and training.",
+      "Using javascript I had built my own custom HTML5 media player as well as incorporating a commonly used media player library",
     player_ID: "6",
     video_title: "Project 6",
     video_MP4: "media/project6.mp4",
@@ -88,7 +88,7 @@ let project = [
     image: "img/project7.PNG",
     alt: "Project 7 screenshot",
     description:
-      "In this project, you'll create a browser version of “Wheel of Success”, a word guessing game. You’ll use Javascript to come up with a random phrase that players will try to guess by entering different letters into the program.",
+      "The game show app was an opportunity to push my javascript knowledge further where I decided to take a deep-dive and learn about javascript module pattern.",
     player_ID: "7",
     video_title: "Project 7",
     video_MP4: "media/project7.mp4",
@@ -102,12 +102,12 @@ let project = [
     image: "img/project8.PNG",
     alt: "Project 8 screenshot",
     description:
-      "Master Scaleable Vector Graphics. SVG graphics are quickly becoming one of the most widely used graphic formats on the web. Modernize the user interface of a web page by adding, styling and optimizing SVG graphics.",
+      "The primary focus of this project was to modernize the user interface  by adding (various methods), styling and optimizing the provided SVG graphics.",
     player_ID: "8",
     video_title: "Project 8",
     video_MP4: "media/project8.mp4",
     video_OGG: "media/project8.ogg",
-    skills: ["html", "css", "JavaScript"],
+    skills: ["html", "css"],
     repository: "https://github.com/WLeyes/treehouse-fewd-project-08",
     preview: "https://leyes.ca/treehouse-fewd-project-08"
   },
@@ -116,7 +116,7 @@ let project = [
     image: "img/project9.PNG",
     alt: "Project 9 screenshot",
     description:
-      "Build an interactive dashboard for a web application using advanced web techniques including SVG graphics and JavaScript programming. The project involves creating tables, charts, graphics and other user interface components in a manner that promotes interactivity and usability.",
+      "For this project I built what one might expect for an Interactive Web app dashboard. Durring the process I learned more about svg's, took my javascript even further by utilizing a third-party API, took time to learn a bit about D3.js and Charts.js libraries to build components that are interactive with a focus on usability.",
     player_ID: "9",
     video_title: "Project 9",
     video_MP4: "media/project9.mp4",
@@ -126,11 +126,11 @@ let project = [
     preview: "https://leyes.ca/treehouse-fewd-project-09"
   },
   {
-    title: "Use a Public API to Create a Front End for an Employee Directory",
+    title: "Employee Directory",
     image: "img/project10.PNG",
     alt: "Project 10 screenshot",
     description:
-      "Many sites — Twitter, Facebook, IMDB, and Wikipedia to name a few — offer a vast sea of data that you can access and display on your own web pages. Using JavaScript, you’ll create an employee directory by communicating with a third-party API (Application Programming Interface).",
+      "In this project I used a third-party API to build an employee overlay in javascript with search and filter functionalities.",
     player_ID: "10",
     video_title: "Project 10",
     video_MP4: "media/project10.mp4",
@@ -144,21 +144,21 @@ let project = [
     image: "img/project11.PNG",
     alt: "Project 11 screenshot",
     description:
-      "Create an image gallery using React and the Flickr API. You will build the gallery components, add to the supplied CSS and set up routing.",
+      "Using the React framework I built a image gallery utilizing the Flicker API. Due to the need for private API key a live preview has not been set up but please feel free to view my code on GitHub.",
     player_ID: "11",
     video_title: "Project 11",
     video_MP4: "media/project11.mp4",
     video_OGG: "media/project11.ogg",
     skills: ["html", "css", "JavaScript", "React"],
-    repository: "https://github.com/WLeyes/treehouse-fewd-project-10",
-    preview: "https://github.com/WLeyes/treehouse-fewd-project-10"
+    repository: "https://github.com/WLeyes/treehouse-fewd-project-11",
+    preview: "https://github.com/WLeyes/treehouse-fewd-project-11"
   },
   {
     title: "Weather API",
     image: "img/weatherAPI.PNG",
     alt: "Weather API screenshot",
     description:
-      "Built a weather app using Wunderground API",
+      "I Built this weather app using Wunderground API to further my knowledge on javascript and API's",
     player_ID: "11",
     video_title: "Project 11",
     video_MP4: "media/project11.mp4",

@@ -9,7 +9,7 @@
   display: table;
   clear: both; }
 
-.skill, .container, .container h1, .nav, .nav__item, .reviews, .card, .card--front,
+.skill, .container, fieldset, .container h1, .nav, .nav__item, .reviews, .card, .card--front,
 .card--back, .logo {
   margin-left: auto;
   margin-right: auto; }
@@ -4531,6 +4531,18 @@ readers do not read off random characters that represent icons */
     grid-column-start: 1;
     grid-column-end: -1; }
 
+.formContainer,
+fieldset {
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; }
+  .formContainer input,
+  fieldset input {
+    margin-bottom: 0.625em; }
+
 /*
 ////////////////////////////////////////////////////////////////////////////////
 // scss/components/_typography.scss : Font styles
@@ -4564,6 +4576,8 @@ header h1 {
     border-radius: 0.6em; }
   .container h2 {
     margin-bottom: 0.625em; }
+  .container h3 {
+    margin-top: 0; }
   .container p {
     margin-top: 0; }
   .container .about p {

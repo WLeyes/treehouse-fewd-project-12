@@ -107,3 +107,21 @@
     }
   }
 }
+
+fieldset {
+  @extend %centered;
+  
+}
+
+.formContainer,
+fieldset {
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  display: grid;
+  grid-template-columns: 1fr; // change to 1fr at media
+  grid-template-rows: 1fr;
+  input {
+    margin-bottom: em(10px);
+  }
+}
