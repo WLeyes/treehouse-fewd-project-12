@@ -66,8 +66,7 @@
   display: block;
   background-color: transparent;
   border: 1px solid $color--logo-background;
-  justify-items: center;
-  font-size: em(14px); // text-transform: uppercase;
+  font-size: em(12px); // text-transform: uppercase;
   font-weight: $font-weight--medium;
   text-align: center;
   text-decoration: none;
@@ -96,7 +95,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: em(200px);
+  width: em(190px);
   font-size: em(12px, 16px);
   margin-bottom: em(10px);
   text-decoration: none;

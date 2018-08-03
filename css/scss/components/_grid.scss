@@ -18,9 +18,9 @@
   @include m(item) {
     text-transform: uppercase;
     flex-direction: row;
+    text-align: left;
     padding: em(5px);
     list-style-type: none;
-    justify-content: space-evenly;
   }
 }
 
@@ -99,7 +99,7 @@
   }
   @include m(back) {
     display: grid;
-    padding: 0 5px;
+    padding: 0;
     grid-template-columns: 1fr;
     .player {
       grid-column-start: 1;
@@ -110,7 +110,6 @@
 
 fieldset {
   @extend %centered;
-  
 }
 
 .formContainer,

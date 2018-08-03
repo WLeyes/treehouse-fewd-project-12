@@ -6,7 +6,7 @@
     list-style-type: none;
     padding: 5px;
     color: palette(silver-chalace, xx-dark);
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-size: em(30px);
   }
 }
@@ -88,14 +88,14 @@
 .card--back {
   @extend %centered;
   background: white;
-  padding: em(10px);
+  padding: em(5px);
   min-height: em(350px);
   border: 1px solid grey;
   border-radius: $border-radius--default;
   video {
     width: 100%;
     margin: 0;
-    padding: em(10px);
+    padding: em(5px);
     &::-webkit-media-controls-fullscreen-button {
       display: none !important;
     }
@@ -103,7 +103,6 @@
   @include media-query(medium) {
     font-size: em(12px);
     height: em(400px);
-    justify-items: center;
     border: 6px solid $color--secondary;
     border-radius: $border-radius--default;
     -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
