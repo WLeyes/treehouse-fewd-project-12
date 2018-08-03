@@ -59,19 +59,22 @@
         </ul>
       </nav>
     </div>
-    <section class="about">
+    <section id="about" class="about">
       <h2>About Me:</h2>
       <p>I am a Front-end Web developer from Vancouver, BC Canada.</p>
       <p>I am passonate about building Innovative designs.</p>
     </section>
-    <section class="skills container">
-      <h2>Skills Learned:</h2>
+    <section id="skills" class="skills container">
+      <h2>Skills Overview:</h2>
       <ul>
         <li>
           <i class="fab fa-html5"></i>
         </li>
         <li>
           <i class="fab fa-css3"></i>
+        </li>
+        <li>
+          <i class="fab fa-sass"></i>
         </li>
         <li>
           <i class="fab fa-js"></i>
@@ -90,7 +93,7 @@
 
     <h2>Recent Projects:</h2>
 
-    <section class="cards container">
+    <section id="projects" class="cards container">
     </section>
 
     <h2>Completely Biased Reviews</h2>
@@ -100,8 +103,36 @@
 
     </section>
 
-    <section>
-      <h1>todo: Add contact information here</h1>
+    <section id="contact">
+      <form name="contactForm" id="contactForm" action="/webformmailer.php" method="post" accept-charset="UTF-8" autocomplete="on">
+        <input type="hidden" name="subject" value="Contact Form Submission" />
+        <input type="hidden" name="redirect" value="thankyou.html" />
+        <h2>Contact Me</h2>
+        <fieldset class="contactForm">
+          <legend>
+            <span>Contact Information</span>
+          </legend>
+          <div class="formContainer">
+            <label for="full-name">Full Name</label>
+            <input type="text" class="" name="full-name" id="full-name" title="Format: Firstname Lastname" placeholder="Required" required
+              autofocus>
+
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+              title="Format: email@example.com" placeholder="Required" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" pattern="[\+]?[\d{1}]?[\(-)]?\d{3}[\)]?[\-]?\d{3}[\-]?\d{4}" title="Formats:xxxXXXxxxx, xxx-xxx-xxxx, (xxx)xxx-xxxx x-xxx-xxx-xxxx, +x-xxx-xxx-xxxx">
+
+            <label for="text-area">Comments:</label>
+            <textarea id="text-area" name="text-area" cols="40" rows="10" placeholder="Required"></textarea>
+          </div>
+        </fieldset>
+        <input type="submit" name="submit" value="Send">
+        <input type="hidden" name="form_order" value="alpha" />
+        <input type="hidden" name="form_delivery" value="hourly_digest" />
+        <input type="hidden" name="form_format" value="html" />
+      </form>
     </section>
 
     <footer>

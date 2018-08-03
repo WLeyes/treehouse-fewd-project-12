@@ -139,4 +139,32 @@ let project = [
     repository: "https://github.com/WLeyes/treehouse-fewd-project-10",
     preview: "https://leyes.ca/treehouse-fewd-project-10"
   },
+  {
+    title: "Use a Public API to Create a Front End for an Employee React Flickr Gallery",
+    image: "img/project11.PNG",
+    alt: "Project 11 screenshot",
+    description:
+      "Create an image gallery using React and the Flickr API. You will build the gallery components, add to the supplied CSS and set up routing.",
+    player_ID: "11",
+    video_title: "Project 11",
+    video_MP4: "media/project11.mp4",
+    video_OGG: "media/project11.ogg",
+    skills: ["html", "css", "JavaScript", "React"],
+    repository: "https://github.com/WLeyes/treehouse-fewd-project-10",
+    preview: "https://github.com/WLeyes/treehouse-fewd-project-10"
+  },
+  {
+    title: "Weather API",
+    image: "img/weatherAPI.PNG",
+    alt: "Weather API screenshot",
+    description:
+      "Built a weather app using Wunderground API",
+    player_ID: "11",
+    video_title: "Project 11",
+    video_MP4: "media/project11.mp4",
+    video_OGG: "media/project11.ogg",
+    skills: ["html", "css", "JavaScript"],
+    repository: "https://github.com/WLeyes/weatherAPI",
+    preview: "#"
+  },
 ];
