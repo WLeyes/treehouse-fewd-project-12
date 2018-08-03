@@ -8,11 +8,9 @@ const DataCtrl = (() => {
     this.firstName = firstName;
     this.lastName = lastName;
     this.image = image;
-    this.email = email;
   };
 
   // Data Fetch API
-  let users = [];
   function fetchUserJSON(url, numberOfUsers) {
     fetch(`${url}?results=${parseInt(numberOfUsers)}`)
       .then(response => response.json())
@@ -35,9 +33,33 @@ const UICtrl = (() => {
     recentActivity: "#recent-activity",
     cards: ".cards"
   };
-
   return {
-    cards: card => {
+    recentActivity: data => {
+      console.log(data);
+      let array = [];
+      for (let i = 0; i < data.results.length; i++) {
+        let firstName = data.results[i].name.first;
+        let lastName = data.results[i].name.last;
+        let image = data.results[i].picture.medium;
+        let email = data.results[i].email;
+        let username = `
+        <div class="reviews">
+          <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--profile"></img>
+          <p>${firstName} ${lastName}</p>
+          <p>${randomReview()}</p>
+        </div>        
+        `;
+        let reviewer = document.querySelector(UISelectors.recentActivity);
+        reviewer.innerHTML += username;
+
+        for (let i = 1; i < 5; i++) {
+          array.push(
+            `${data.results[i].name.first} ${data.results[i].name.last}`
+          );
+        }
+      }
+    },
+    cards: () => {
       for (let i = 0; i < project.length; i++) {
         let title = project[i].title;
         let image = project[i].image;
@@ -90,32 +112,7 @@ const UICtrl = (() => {
         `;
         let cardElement = document.querySelector(UISelectors.cards);
         console.log(cardElement);
-
         cardElement.innerHTML += card;
-      }
-    },
-    recentActivity: data => {
-      let array = [];
-      for (let i = 0; i < data.results.length; i++) {
-        let firstName = data.results[i].name.first;
-        let lastName = data.results[i].name.last;
-        let image = data.results[i].picture.medium;
-        let email = data.results[i].email;
-        let username = `
-        <div class="reviews">
-          <img src ="${image}" alt="${firstName} ${lastName}'s profile picture" class="img--profile"></img>
-          <p>${firstName} ${lastName}</p>
-          <p>${randomReview()}</p>
-        </div>        
-        `;
-        let reviewer = document.querySelector(UISelectors.recentActivity);
-        reviewer.innerHTML += username;
-
-        for (let i = 1; i < 5; i++) {
-          array.push(
-            `${data.results[i].name.first} ${data.results[i].name.last}`
-          );
-        }
       }
     },
     getSelectors: () => UISelectors

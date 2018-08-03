@@ -33,7 +33,7 @@ let project = [
     alt: "Project 3 screenshot",
     description:
       "This project involved building a mobile-first registration form using a variety of HTML form elements, CSS and JavaScript",
-    player_ID: "1",
+    player_ID: "3",
     video_title: "Project 3",
     video_MP4: "media/project3.mp4",
     video_OGG: "media/project3.ogg",
@@ -159,10 +159,10 @@ let project = [
     alt: "Weather API screenshot",
     description:
       "I Built this weather app using Wunderground API to further my knowledge on javascript and API's",
-    player_ID: "11",
-    video_title: "Project 11",
-    video_MP4: "media/project11.mp4",
-    video_OGG: "media/project11.ogg",
+    player_ID: "12",
+    video_title: "Weather API",
+    video_MP4: "",
+    video_OGG: "",
     skills: ["html", "css", "JavaScript"],
     repository: "https://github.com/WLeyes/weatherAPI",
     preview: "#"
