@@ -17,15 +17,9 @@ header {
   }
 }
 
-.skills {
-  h2 {
-    margin-top: 0;
-  }
-}
-
 // Main Container
 .container {
-  color: palette(silver-chalace, dark); // font-size: em(18px);
+  color: palette(silver-chalace, dark);
   font-family: $font-family--primary;
   font-weight: $font-weight--medium;
   text-align: center;
@@ -84,6 +78,20 @@ header {
       text-align: center;
     }
   }
+}
+
+.skills {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.footer,
+.copyright {
+  color: palette(silver-chalace, dark);
+  font-family: $font-family--primary;
+  font-weight: $font-weight--medium;
+  text-align: center;
 }
 
 // Main Headlines

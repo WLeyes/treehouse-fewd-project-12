@@ -10,12 +10,14 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- JavaScript -->
   <script src="js/fontawesome-all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js" defer></script>
   <script src="data/data.js" defer></script>
   <script src="data/projects.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 
-<body class="container">
+<body>
+
   <div class="logo">
     <div class="logo--icon fa-10x">
       <span class="fa-layers fa-fw">
@@ -27,8 +29,9 @@
     <p class="logo--line2">Leyes</p>
     <p class="logo--line3">Front-end Web Developer</p>
   </div>
-
-  <h1>Always aiming to Exceed</h1>
+  <div class="container">
+    <h1>Always aiming to Exceed</h1>
+  </div>
   <!-- <i class="cog fas fa-spin fa-cog"></i> -->
 
   <main class="container">
@@ -96,6 +99,7 @@
           <i class="fab fa-git"></i>
         </li>
       </ul>
+      <canvas id="charts--doughnut"></canvas>
     </section>
 
     <h2>Recent Projects:</h2>
@@ -133,18 +137,28 @@
             <textarea id="text-area" name="text-area" cols="40" rows="10" placeholder="Required" required></textarea>
           </div>
         </fieldset>
-        <button type="submit" name="submit" value="Send">
-          <i class="fal fa-envelope"></i>Send</button>
+        <button class="btn--success theme__colors" type="submit" name="submit" value="Send">
+          <i class="fal fa-envelope"></i> Send</button>
         <input type="hidden" name="form_order" value="alpha" />
         <input type="hidden" name="form_delivery" value="default" />
         <input type="hidden" name="form_format" value="html" />
       </form>
     </section>
-
-    <footer>
-      <h1>todo: add footer content</h1>
-    </footer>
   </main>
+  <footer>
+    <div class="footer">
+      <a href="mailto:warren.leyes@gmail.com">
+        <i class="fas fa-envelope-square"></i> Email</a>
+      <a href="tel:+6043455203">
+        <i class="far fa-mobile-alt"></i> Phone</a>
+      <a href="https://twitter.com/warren_leyes" target="_blank">
+        <i class="fab fa-twitter-square"></i> Twitter</a>
+      <a href="https://www.linkedin.com/in/warren-leyes/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <p class="copyright">Copyright
+      <i class="fal fa-copyright"></i> Warren Leyes 2018</p>
+  </footer>
 </body>
 
 </html>

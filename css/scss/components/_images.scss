@@ -12,9 +12,14 @@
     width: em(72px);
     border-radius: $border-radius--round;
   }
-  @include m(background){
+  @include m(background) {
     height: 100px;
     width: 90%;
     @extend .centered;
   }
+}
+
+#charts--doughnut {
+  max-width: 768px;
+  @extend %centered;
 }

@@ -9,6 +9,13 @@ const DataCtrl = (() => {
     this.lastName = lastName;
     this.image = image;
   };
+  // Fetch treehouse API
+  function fetchTreehouseProfile(profile) {
+    fetch(`https://teamtreehouse.com/${profile}.json`)
+      .then(response => response.json())
+      .then(data => UICtrl.doughnut(data))
+      .catch(error => console.log(error));
+  };
 
   // Data Fetch API
   function fetchUserJSON(url, numberOfUsers) {
@@ -22,6 +29,9 @@ const DataCtrl = (() => {
   return {
     getRandomUser: () => {
       fetchUserJSON("https://randomuser.me/api/", 12);
+    },
+    getTreehouseProfile: () => {
+      fetchTreehouseProfile('warrenleyes');
     }
   };
 })();
@@ -31,9 +41,13 @@ const UICtrl = (() => {
   messageArray = [];
   const UISelectors = {
     recentActivity: "#recent-activity",
-    cards: ".cards"
+    cards: ".cards",
+    skills: "charts--doughnut"
   };
   return {
+    treehouseProfile: data => {
+
+    },
     recentActivity: data => {
       console.log(data);
       for (let i = 0; i < data.results.length; i++) {
@@ -104,11 +118,32 @@ const UICtrl = (() => {
       </div>
         `;
         let cardElement = document.querySelector(UISelectors.cards);
-        console.log(cardElement);
         cardElement.innerHTML += card;
-        console.log(card);
-
       }
+    },
+    doughnut: (data) => {
+      console.log(`Name: ${data.name}`);
+      console.log(`HTML: ${data.points.HTML}`);
+      console.log(`CSS: ${data.points.CSS}`);
+      console.log(`JavaScript: ${data.points.JavaScript}`);
+      console.log(`Development Tools: ${data.points['Development Tools']}`);
+      console.log(`Total Points: ${data.points.total}`);
+
+      let ctx = document.getElementById(UISelectors.skills).getContext('2d');
+      let myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ["HTML", "CSS", "JavaScript", "Development Tools"],
+          datasets: [{
+            label: "Treehouse Points - top categories",
+            data: [data.points.HTML, data.points.CSS, data.points.JavaScript, data.points['Development Tools']],
+            backgroundColor: ["rgba(129, 201, 143, 1)", "rgba(116, 177, 191, 1)", "rgba(115, 119, 191, 1)"]
+          }]
+        },
+        options: {
+          legend: { display: true, position: 'top' }
+        }
+      })
     },
     getSelectors: () => UISelectors
   };
@@ -124,10 +159,9 @@ const App = ((UICtrl, DataCtrl, ChartCtrl) => {
     init: () => {
       console.log("Initializing App ...");
       DataCtrl.getRandomUser();
+      DataCtrl.getTreehouseProfile();
       UICtrl.cards();
-      // console.log(project[0]); // Test that projects are being imported
       console.log(` Number of projects: ${project.length}`);
-
       loadEventListeners();
     }
   };

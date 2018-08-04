@@ -84,21 +84,22 @@
 // Buttons
 //////////////////////////////////////////////////////////////////////////////
 %buttons {
-  border-radius: $border-radius--default;
   color: $white;
   text-transform: uppercase;
   outline: 0;
   border: 0;
   font-weight: $font-weight--medium;
   transition: opacity $trns-duration;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: em(190px);
-  font-size: em(12px, 16px);
-  margin-bottom: em(10px);
+  width: em(150px);
+  font-size: em(16px);
+  margin-top: em(10px);
+  margin-bottom: em(20px);
+  padding: em(10px);
   text-decoration: none;
+  border-radius: em(3px);
+  -webkit-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
+  box-shadow: 11px 10px 25px -4px rgba(0, 0, 0, 0.63);
   &:hover {
     opacity: 0.75;
   }
