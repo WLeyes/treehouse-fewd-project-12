@@ -8,16 +8,3 @@
 .theme__colors.btn {
   @include bg-colors($btn-colors, "%buttons");
 }
-
-.btn {
-  @include m(group) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    @include media-query(medium) {
-      a {
-        margin: 0 em(10px);
-      }
-    }
-  }
-}

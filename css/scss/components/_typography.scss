@@ -49,6 +49,21 @@ header {
       margin: 0 em(20px) em(10px) em(20px);
     }
   }
+  .messages {
+    display: none;
+    width: em(320px);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $white;
+    margin-top: em(20px);
+    padding: em(5px);
+    border-radius: $border-radius--default;
+    cursor: pointer;
+    @extend %centered;
+    p {
+      width: 80%;
+      @extend %centered;
+    }
+  }
   .search {
     outline: none;
     border: 2px solid gray;

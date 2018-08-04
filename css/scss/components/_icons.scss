@@ -1,9 +1,9 @@
-.icons{
-  @include m(github){
+.icons {
+  @include m(github) {
     width: em(32px);
     height: em(32px);
   }
-  @include m(preview){
+  @include m(preview) {
     width: em(32px);
     height: em(32px);
   }

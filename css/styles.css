@@ -8,7 +8,7 @@
   display: table;
   clear: both; }
 
-.skill, .container, fieldset, .container h1, .nav, .nav__item, #charts--doughnut, .reviews, .card, .card--front,
+.skill, .container, fieldset, .container h1, .container .messages, .container .messages p, .nav, .nav__item, #charts--doughnut, .reviews, .card, .card--front,
 .card--back, .logo {
   margin-left: auto;
   margin-right: auto; }
@@ -60,8 +60,7 @@
   transition: opacity 0.3s;
   width: 9.375em;
   font-size: 1em;
-  margin-top: 0.625em;
-  margin-bottom: 1.25em;
+  margin: 0.625em;
   padding: 0.625em;
   text-decoration: none;
   border-radius: 0.1875em;
@@ -4579,6 +4578,17 @@ header h1 {
   .container .about p {
     text-align: left;
     margin: 0 1.25em 0.625em 1.25em; }
+  .container .messages {
+    display: none;
+    width: 20em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    margin-top: 1.25em;
+    padding: 0.3125em;
+    border-radius: 0.6em;
+    cursor: pointer; }
+    .container .messages p {
+      width: 80%; }
   .container .search {
     outline: none;
     border: 2px solid gray;
@@ -4710,14 +4720,6 @@ header h1 {
   background-color: #fd7856; }
 .theme__colors.btn--info {
   background-color: #927bc1; }
-
-.btn--group {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  @media (min-width: 768px) {
-    .btn--group a {
-      margin: 0 0.625em; } }
 
 /*
 ////////////////////////////////////////////////////////////////////////////////

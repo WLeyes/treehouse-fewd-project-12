@@ -116,7 +116,7 @@ let project = [
     image: "img/project9.PNG",
     alt: "Project 9 screenshot",
     description:
-      "For this project I built what one might expect for an Interactive Web app dashboard. Durring the process I learned more about svg's, took my javascript even further by utilizing a third-party API, took time to learn a bit about D3.js and Charts.js libraries",
+      "For this project I built an Interactive Web app dashboard. Durring the process I learned more about svg's, took my javascript even further by utilizing a third-party API",
     player_ID: "9",
     video_title: "Project 9",
     video_MP4: "media/project9.mp4",
@@ -144,7 +144,7 @@ let project = [
     image: "img/project11.PNG",
     alt: "Project 11 screenshot",
     description:
-      "Using the React framework I built a image gallery utilizing the Flicker API. Due to the need for private API key a live preview has not been set up but please feel free to view my code on GitHub.",
+      "Using the React I built a image gallery utilizing the Flicker API. Due to the need for private API key a live preview has not been set up.",
     player_ID: "11",
     video_title: "Project 11",
     video_MP4: "media/project11.mp4",
@@ -152,19 +152,5 @@ let project = [
     skills: ["html", "css", "JavaScript", "React"],
     repository: "https://github.com/WLeyes/treehouse-fewd-project-11",
     preview: "https://github.com/WLeyes/treehouse-fewd-project-11"
-  },
-  {
-    title: "Weather API",
-    image: "img/weatherAPI.PNG",
-    alt: "Weather API screenshot",
-    description:
-      "I Built this weather app using Wunderground API to further my knowledge on javascript and API's",
-    player_ID: "12",
-    video_title: "Weather API",
-    video_MP4: "",
-    video_OGG: "",
-    skills: ["html", "css", "JavaScript"],
-    repository: "https://github.com/WLeyes/weatherAPI",
-    preview: "#"
   },
 ];

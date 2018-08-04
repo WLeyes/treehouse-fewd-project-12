@@ -2,13 +2,7 @@ console.log("Connected to app.js");
 
 // Data Controller
 const DataCtrl = (() => {
-  // User Constructor
-  const User = (id, firstName, lastName, image, email) => {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.image = image;
-  };
+
   // Fetch treehouse API
   function fetchTreehouseProfile(profile) {
     fetch(`https://teamtreehouse.com/${profile}.json`)
@@ -42,11 +36,16 @@ const UICtrl = (() => {
   const UISelectors = {
     recentActivity: "#recent-activity",
     cards: ".cards",
+    alert: ".messages",
     skills: "charts--doughnut"
   };
   return {
-    treehouseProfile: data => {
-
+    alert: () => {
+      setTimeout(() => {
+        let output = document.querySelector(UISelectors.alert);
+        output.style.display = 'block';
+        output.innerHTML = `<p class="btn--error theme__colors">Status: Available for hire | freelance <i class="fal fa-times-octagon"></i></p>`;
+      }, 5000);
     },
     recentActivity: data => {
       console.log(data);
@@ -107,12 +106,8 @@ const UICtrl = (() => {
             <p class="skills">Skills used: ${skills}</p>
           </div>
           <div class="btn--group grid__row">
-            <a href="${repository}" target="_blank" class="btn--default theme__colors">
-              <img src="img/github.svg" alt="Code svg" class="icons--github">view code
-            </a>
-            <a href="${preview}" target="_blank" class="btn--info theme__colors">
-              <img src="img/eye.svg" alt="Code svg" class="icons--preview">preview
-            </a>
+            <a href="${repository}" target="_blank" class="btn--default theme__colors"><i class="fab fa-github"></i> View Code</a>
+            <a href="${preview}" target="_blank" class="btn--info theme__colors"><i class="fal fa-browser"></i> Preview </a>
           </div>
         </div>
       </div>
@@ -154,13 +149,18 @@ const App = ((UICtrl, DataCtrl, ChartCtrl) => {
   // Get UI selectors
   const UISelectors = UICtrl.getSelectors();
 
-  const loadEventListeners = () => { };
+  const loadEventListeners = () => {
+    document.querySelector(UISelectors.alert).addEventListener("click", () => {
+      document.querySelector(UISelectors.alert).style.display = "none";
+    });
+  };
   return {
     init: () => {
       console.log("Initializing App ...");
       DataCtrl.getRandomUser();
       DataCtrl.getTreehouseProfile();
       UICtrl.cards();
+      UICtrl.alert();
       console.log(` Number of projects: ${project.length}`);
       loadEventListeners();
     }
